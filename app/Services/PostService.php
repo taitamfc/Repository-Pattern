@@ -2,25 +2,33 @@
 
 namespace App\Services;
 
-// use App\Repositories\Interfaces\PostInterface;
 use App\Services\Interfaces\PostServiceInterface;
+
+use App\Repositories\Interfaces\PostRepositoryInterface;
 
 class PostService implements PostServiceInterface
 {
+    protected $postRepository;
+
+    public function __construct(PostRepositoryInterface $postRepository)
+    {
+        $this->postRepository = $postRepository;
+    }
+
     /* Triển khai các phương thức trong PostServiceInterface */
     public function all($request){
-        echo __METHOD__;
+        return $this->postRepository->all($request);
     }
     public function find($id){
-        echo __METHOD__;
+        return $this->postRepository->find($id);
     }
     public function store($request){
-        echo __METHOD__;
+        return $this->postRepository->store($request);
     }
     public function update($request, $id){
-        echo __METHOD__;
+        return $this->postRepository->update($request,$id);
     }
     public function destroy($id){
-        echo __METHOD__;
+        return $this->postRepository->destroy($id);
     }
 }

@@ -116,7 +116,7 @@ class PostController extends Controller
     public function destroy($id)
     {
         try {
-            $this->postService->destroy($request,$id);
+            $this->postService->destroy($id);
             // logic after destroy
         } catch (\Execption $e) {
             //logic handle error
