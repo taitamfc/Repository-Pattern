@@ -1,3 +1,5 @@
+---- Chạy lệnh *git checkout complete-service* để xem code từ B1 -> B6 ----
+
 B1: Chạy lệnh *php artisan make:model Post -a* để tạo các thành phần sau:
 - App\Models\Post: Làm việc với CSDL
 - Database\Factories\PostFactory: Dùng để tạo dữ liệu ảo
@@ -30,6 +32,8 @@ B5: Sử dụng PostServiceInterface tại app/Http/Controllers/PostController
 B6: Chạy server và truy cập đường dẫn /posts
     - Khai báo route resource để làm việc với posts
         + Route::resource('posts',\App\Http\Controllers\PostController::class);
+
+---- Chạy lệnh *git checkout complete-repository* để xem code từ B7 -> B11 ----
 
 B7: Lần lượt tạo 2 thư mục
 - app/Repositories/Eloquents: để làm việc với database
