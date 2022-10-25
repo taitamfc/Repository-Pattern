@@ -4,6 +4,10 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+/* PostService */
+use App\Services\Interfaces\PostServiceInterface;
+use App\Services\PostService;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -13,7 +17,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        /* Binding Services*/
+        $this->app->singleton(PostServiceInterface::class, PostService::class);
     }
 
     /**
