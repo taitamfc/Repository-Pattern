@@ -14,7 +14,7 @@ class PostService implements PostServiceInterface
     public function find($id){
         echo __METHOD__;
     }
-    public function create($request){
+    public function store($request){
         echo __METHOD__;
     }
     public function update($request, $id){
